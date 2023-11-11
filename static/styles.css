@@ -62,3 +62,10 @@
     background-color: white; /* White background color */
     padding: 10px; /* Some padding */
   }
+
+  .center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+  }
