@@ -4,6 +4,11 @@
     <link href="/static/styles.css" rel="stylesheet">
     <head>
         <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link href="https://unpkg.com/maplibre-gl@3.x/dist/maplibre-gl.css" rel="stylesheet" />
+        <style>
+        body { margin: 0; }
+        #map { height: 100vh; }
+        </style>
     </head>
 
     <div class="header">
@@ -24,6 +29,23 @@
               <div class="side">...</div>
               <div class="main">Learn how it works... </div>
           </div>
+
+    <div id="map" />
+    <script src="https://unpkg.com/maplibre-gl@3.x/dist/maplibre-gl.js"></script>
+    <script>
+      const apiKey = "v1.public.eyJqdGkiOiI2Y2I2YTY3MS0wODU5LTRmOTQtOTUwZS05MDUzOTRkMjFmMGYifXOpRyDaG3aj83AwffR3wOQWMiw1CfFc99tDws3hslbWv0hcfjwUhSwom3LNOQLJBpZ8MnlBl26Bj2Mg9ZusqGA1zF4QVOoJlp6c9y0xK_BGMN1Em3pDDc2GqX7m6n0KzL6RftBbcBHDdFsRaqT41gpbeuQWb8XWPLobUPyeh3o4gPYWj5FmZF1IyPrKxnsg_DOw3sh17_dLAkys9xAYQ0feXhIIzHbnhaqRmgruuxiQ07HSOmuQVrRbH4aL3r9Z__p5OAWUS0lAERwnx2ViYQ7cHmMZlttpAIezzFU9SbRsIcYCCJwGUH0Zy-y98C1btshn2Q9FAbzzQrdilLQaR00.ZWU0ZWIzMTktMWRhNi00Mzg0LTllMzYtNzlmMDU3MjRmYTkx";
+      const mapName = "MyMap1";
+      const region = "us-east-1";
+
+      const map = new maplibregl.Map({
+        container: "map",
+        style: `https://maps.geo.${region}.amazonaws.com/maps/v0/maps/${mapName}/style-descriptor?key=${apiKey}`,
+        center: [-75.480858, 40.632950],
+        zoom: 11,
+      });
+      map.addControl(new maplibregl.NavigationControl(), "top-left");
+    </script>
+
       </form>
     </body>
 </html>
