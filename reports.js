@@ -12,11 +12,14 @@ fetch("https://09bqaa1thb.execute-api.us-east-1.amazonaws.com/dev")
     //let arr = eval(JSON.parse(data));
 
 
-        const para = document.createElement("pre");
+        const para = document.createElement("p");
         for (var item of data){
           for (const [key, value] of Object.entries(item)) {
-            const node = document.createTextNode(`${key}: ${value}\n`);
+            const node = document.createTextNode(`${key}: ${value}`);
+            node.style = 'form-label'
+            const lineBreak = document.createElement('br')
             para.appendChild(node);
+            para.appendChild(lineBreak);
           }
           }
 

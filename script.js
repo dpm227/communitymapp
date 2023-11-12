@@ -1,11 +1,11 @@
 // callAPI function that takes the base and exponent numbers as parameters
-var callAPI = (name, long, lat, comment)=>{
+var callAPI = (name, long, comment)=>{
     // instantiate a headers object
     var myHeaders = new Headers();
     // add content type header to object
     myHeaders.append("Content-Type", "application/json");
     // using built in JSON utility package turn object to string and store in a variable
-    var raw = JSON.stringify({"name":name,"long":long,"lat":lat,"comment":comment});
+    var raw = JSON.stringify({"name":name,"long":long,"comment":comment});
     // create a JSON object with parameters for API call and store in a variable
     var requestOptions = {
         method: 'POST',

@@ -1,71 +1,82 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  background: linear-gradient(to bottom, #48556e, #293241);
+  color: #FFFFFF;
+}
 .header {
-    padding: 50px; /* some padding */
-    text-align: center; /* center the text */
-    background: #1bbc9c; /* green background - color stored in hexidecimal*/
-    color: white; /* white text color */
-  }
-
-  /* Increase the font size of the <h1> element */
-  .header h1 {
-    font-size: 40px;
-  }
-
-  /* Style the top navigation bar */
+  background: linear-gradient(to right, #fc575e, #f7b42c);
+  text-align: center;
+  padding: 40px 20px;
+}
+.header h1 {
+  margin: 0;
+  font-size: 3em;
+  letter-spacing: 3px;
+}
+.header p {
+  margin: 10px 0;
+  font-size: 1.2em;
+  opacity: 0.8;
+}
 .navbar {
-    overflow: hidden; /* Hide overflow */
-    background-color: #333; /* Dark background color */
+  background-color: #772CC7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar a {
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 20px 30px;
+  transition: 0.3s;
+}
+.navbar a:hover {
+  background-color: #7C06F9;
+}
+#map {
+  height: 100vh;
+}
+form {
+  margin: 40px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  width: 60%;
+  max-width: 600px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.form-label {
+  display: block;
+  margin-top: 20px;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+input[type='text'] {
+  width: calc(100% - 20px);
+  padding: 15px;
+  margin: 5px 0 20px 0;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+  ::placeholder {
+      color: #ddd;
   }
-
-  /* Style the navigation bar links */
-  .navbar a {
-    float: left; /* Make sure that the links stay side-by-side */
-    display: block; /* Change the display to block, for responsive reasons (see below) */
-    color: white; /* White text color */
-    text-align: center; /* Center the text */
-    padding: 14px 20px; /* Add some padding */
-    text-decoration: none; /* Remove underline */
-  }
-
-  /* Right-aligned link */
-  .navbar a.right {
-    float: right; /* Float a link to the right */
-  }
-
-  /* Change color on hover/mouse-over */
-  .navbar a:hover {
-    background-color: #ddd; /* Grey background color */
-    color: black; /* Black text color */
-  }
-
-  /* Ensure proper sizing */
-  {
-    box-sizing: border-box;
-  }
-
-  /* Column container */
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  /* Create two unequal columns that sits next to each other */
-  /* Sidebar/left column */
-  .side {
-    flex: 30%; /* Set the width of the sidebar */
-    background-color: #f1f1f1; /* Grey background color */
-    padding: 20px; /* Some padding */
-  }
-
-  /* Main column */
-  .main {
-    flex: 70%; /* Set the width of the main content */
-    background-color: white; /* White background color */
-    padding: 10px; /* Some padding */
-  }
-
-  .center {
-    margin: auto;
-    width: 60%;
-    border: 3px solid #73AD21;
-    padding: 10px;
-  }
+}
+button[type='submit'] {
+  background: linear-gradient(to right, #fc575e, #f7b42c);
+  color: #FFFFFF;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: 0.3s;
+}
+button[type='submit']:hover {
+  background: linear-gradient(to right, #f7b42c, #fc575e);
+}
