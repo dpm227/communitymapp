@@ -36,9 +36,9 @@
     <script src="https://unpkg.com/maplibre-gl@3.x/dist/maplibre-gl.js"></script>
     <script src = "script.js"></script>
     <script>
-      const apiKey = "v1.public.eyJqdGkiOiI2Y2I2YTY3MS0wODU5LTRmOTQtOTUwZS05MDUzOTRkMjFmMGYifXOpRyDaG3aj83AwffR3wOQWMiw1CfFc99tDws3hslbWv0hcfjwUhSwom3LNOQLJBpZ8MnlBl26Bj2Mg9ZusqGA1zF4QVOoJlp6c9y0xK_BGMN1Em3pDDc2GqX7m6n0KzL6RftBbcBHDdFsRaqT41gpbeuQWb8XWPLobUPyeh3o4gPYWj5FmZF1IyPrKxnsg_DOw3sh17_dLAkys9xAYQ0feXhIIzHbnhaqRmgruuxiQ07HSOmuQVrRbH4aL3r9Z__p5OAWUS0lAERwnx2ViYQ7cHmMZlttpAIezzFU9SbRsIcYCCJwGUH0Zy-y98C1btshn2Q9FAbzzQrdilLQaR00.ZWU0ZWIzMTktMWRhNi00Mzg0LTllMzYtNzlmMDU3MjRmYTkx";
+      const apiKey = "v1.public.eyJqdGkiOiIyYjQwNzBjMi1iNzc0LTQzMmEtYjNhNy01Mjk4N2MxYmNmMjEifTaP4on7XGxJSSXEctR7FmlQ5l3lDEjWFcGKaUZkF5Lwu-ppGT-kO3VECm8tDumeMFffhYGXh__WznqZ8wbxYUZ4fn7brkCf_5Ewv4LX7KCQE8c6jTurQ6QMNCDq8r6bn6r3bWRBBkcVYf5IqQ36tmDtPUIQZgtDOuS6XC7fUkNcCqpND4b4MylZB8p9PoVoIHDd0_GZhGbqrbSbe-vRPjNE6OMJjsNxOMHmsmF4C2ldR_06a-RUJgwqceG6_TKGFLu-2ncIbrk5IOMsXaV9gKC40Wz6_ubgLbBT2IyASvz__5J4R5aYCE3Bh93vJpibU3Oeoim6-J8c2wSYKxa8ooA.NjAyMWJkZWUtMGMyOS00NmRkLThjZTMtODEyOTkzZTUyMTBi";
       const mapName = "MyMap1";
-      const region = "us-east-1";
+      const region = "us-east-2";
 
       const map = new maplibregl.Map({
             container: "map",
@@ -49,7 +49,7 @@
         map.addControl(new maplibregl.NavigationControl(), "top-left");
 
         // send request to database --> print out markers on map
-        fetch("https://09bqaa1thb.execute-api.us-east-1.amazonaws.com/dev")
+        fetch("https://qac92d55ac.execute-api.us-east-2.amazonaws.com/dev")
         .then(response => {
             // Check if the request was successful (status code 2xx)
             if (!response.ok) {

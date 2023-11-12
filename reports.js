@@ -1,4 +1,4 @@
-fetch("https://09bqaa1thb.execute-api.us-east-1.amazonaws.com/dev")
+fetch("https://qac92d55ac.execute-api.us-east-2.amazonaws.com/dev")
   .then(response => {
     // Check if the request was successful (status code 2xx)
     if (!response.ok) {
