@@ -24,40 +24,34 @@
     </div>
 
     <body>
+      <script src = "script.js"></script>
       
-      <form>
+      <form id = "form">
         <div class='center'>
-          <label for='text1'>Text</label>
-          <input type='text' id='text1' placeholder='Field Text'/>
+          <label for='name'>Text</label>
+          <input type='text' id='name' placeholder='Enter Name'/>
         </div>
         <div class='center'>
-          <label for='textarea1'>Textarea</label>
-          <textarea id='textarea1' placeholder='Field Textarea'></textarea>
+          <label for='long'>Text</label>
+          <input type='text' id='long' placeholder='Enter Longitude'/>
         </div>
         <div class='center'>
-          <label for='select1'>Select</label>
-          <select id='select1' placeholder='Field Textarea'>
-            <option value=''>Select</option>
-            <option value='Select One'>Select One</option>
-            <option value='Select Two'>Select Two</option>
-            <option value='Select Three'>Select Three</option>
-            <option value='Select Four'>Select Four</option>
-          </select>
+          <label for='lat'>Text</label>
+          <input type='text' id='lat' placeholder='Enter Latitude'/>
         </div>
         <div class='center'>
-          <div class='checkbox_block'>
-            <input type='checkbox' id='checkbox1'/>
-            <label for='checkbox1'>Checkbox 1</label>
-          </div>
-          <div class='checkbox_block'>
-            <input type='checkbox' id='checkbox2'/>
-            <label for='checkbox2'>Checkbox 2</label>
-          </div>
+          <label for='comment'>Text</label>
+          <input type='text' id='comment' placeholder='Enter Comment'/>
         </div>
         <div class = "center">
-        <button type='submit'>Submit Form</button>
+          <button type='submit'
+        onclick="
+        callAPI(document.getElementById('name').value,
+        document.getElementById('long').value,
+        document.getElementById('lat').value,
+        document.getElementById('comment').value)">Submit Form</button>
+        </div>
     </div>
       </form>
-
     </body>
 </html>
