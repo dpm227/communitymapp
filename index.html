@@ -43,18 +43,37 @@
             zoom: 11,
         });
         map.addControl(new maplibregl.NavigationControl(), "top-left");
-        
-        const markerCoordinates = [-75.480858, 40.632950];
 
-        const marker = new maplibregl.Marker()
-            .setLngLat(markerCoordinates)
-            .addTo(map);
+        // send request to database --> print out markers on map
+        fetch("https://09bqaa1thb.execute-api.us-east-1.amazonaws.com/dev")
+        .then(response => {
+            // Check if the request was successful (status code 2xx)
+            if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            // Parse the JSON in the response
+            return response.json();
+        })
+        .then(data => {
+            // Process the data obtained from the API
+                for (var item of data){
+                    const markerCoordinates = [item['long'], item['lat']]
 
-        const popup = new maplibregl.Popup({ offset: 25 })
-            .setLngLat(markerCoordinates)
-            .setHTML("<h3>ValleyGuard</h3><p>Share, Protect, Connect</p>");
-        marker.setPopup(popup);
-        popup.addTo(map);
+                    const marker = new maplibregl.Marker()
+                        .setLngLat(markerCoordinates)
+                        .addTo(map);
+
+                    const popup = new maplibregl.Popup({ offset: 25 })
+                        .setLngLat(markerCoordinates)
+                        .setHTML(`<h6>${item['address']}</h6><p>${item['comment']}</p>`);
+                    marker.setPopup(popup);
+                    popup.addTo(map);
+                }
+        })
+        .catch(error => {
+            // Handle errors during the fetch
+            console.error('Fetch error:', error);
+        });
     </script>
 
     </body>
