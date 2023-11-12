@@ -10,24 +10,29 @@ fetch("https://09bqaa1thb.execute-api.us-east-1.amazonaws.com/dev")
   .then(data => {
     // Process the data obtained from the API
     //let arr = eval(JSON.parse(data));
+    //var container = document.getElementById('p1');
+    const container = document.createElement("updateMessages");
+    container.classList.add('list-group-item');
 
-
-        const para = document.createElement("p");
-        for (var item of data){
-          for (const [key, value] of Object.entries(item)) {
-            const node = document.createTextNode(`${key}: ${value}`);
-            node.style = 'form-label'
-            const lineBreak = document.createElement('br')
-            para.appendChild(node);
-            para.appendChild(lineBreak);
-          }
-          }
-
-        const element = document.getElementById("div1");
-        const child = document.getElementById("p1");
-        element.insertBefore(para,child);
-        
-
+    for (var item of data) {
+        // Create a container for each paragraph
+        var paraContainer = document.createElement('div');
+        paraContainer.classList.add('list-group-item'); // Add a class for styling if needed
+    
+        // Create a paragraph element for each item in the data
+        var paragraph = document.createElement('div');
+        paragraph.textContent = item['LatestGreetingTime'] + " reported an event at " + item['address'];
+    
+        // Append the paragraph to the container
+        paraContainer.appendChild(paragraph);
+    
+        // Append the container to the main container
+        container.appendChild(paraContainer);
+    }
+    
+    // Assuming you have an existing element with an id "main-container" to append the containers to
+    document.getElementById("updateMessages").appendChild(container);
+    
   })
   .catch(error => {
     // Handle errors during the fetch
