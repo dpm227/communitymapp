@@ -20,20 +20,25 @@ body {
   opacity: 0.8;
 }
 .navbar {
-  background-color: #772CC7;
+  background-color: #0D2B86;
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Aligns items to each end */
   align-items: center;
-}
+  padding: 5px 20px;
+ }
+
 .navbar a {
   color: #FFFFFF;
   text-decoration: none;
-  padding: 20px 30px;
+  padding: 5px 10px;
   transition: 0.3s;
 }
-.navbar a:hover {
-  background-color: #7C06F9;
+
+.navbar img {
+  height: 80px; /* Set the height of the image */
+  width: auto; /* Maintain aspect ratio */
 }
+
 #map {
   height: 100vh;
 }
