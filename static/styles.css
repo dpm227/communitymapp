@@ -22,9 +22,9 @@ body {
 .navbar {
   background-color: #0D2B86;
   display: flex;
-  justify-content: space-between; /* Aligns items to each end */
+  justify-content: start; /* Aligns items to each end */
   align-items: center;
-  padding: 5px 20px;
+  padding: 5px 30px;
  }
 
 .navbar a {
