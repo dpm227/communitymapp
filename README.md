@@ -1,6 +1,6 @@
 ## ValleyGuard
 
-website hosted on AWS Amplify: [https://dev7432.d2ir80xfdjaxsq.amplifyapp.com/live.html](url)
+website hosted on AWS Amplify: [https://dev7432.d2ir80xfdjaxsq.amplifyapp.com/index.html](url)
 
 communitymapp is the name of our repo for the ValleyGuard web application using AWS. 
 
